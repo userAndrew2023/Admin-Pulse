@@ -1,12 +1,13 @@
-import datetime
 from peewee import *
+
 from models.base_model import BaseModel
 
 
-class Chat(BaseModel):
+class DelayedMessage(BaseModel):
     id = PrimaryKeyField(null=False)
     chat_id = CharField(max_length=100)
-    user_id = CharField(max_length=100)
+    text = CharField(max_length=100)
+    date_time = DateTimeField(null=False)
 
     class Meta:
-        db_table = "chats"
+        db_table = "delayed_messages"
