@@ -9,4 +9,5 @@ from handlers import handler
 from handlers import community_handler
 from handlers import moderation_handler
 from handlers import delayed_message_handler
+from handlers import balance_handler
 
